@@ -1,28 +1,907 @@
-.App {
-  text-align: center;
-}
+@keyframes moveCat {
+  0% {
+    transform: rotate(-2deg); }
+  100% {
+    transform: rotate(2deg); } }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
+@keyframes moveGun {
+  0% {
+    left: 40px;
+    transform: rotate(-2deg); }
+  100% {
+    left: 50px;
+    transform: rotate(2deg); } }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
+.ShootingScene {
+  padding-top: 400px; }
+  .ShootingScene .rambo {
+    left: 0px;
+    top: 0px;
+    width: 300px;
+    position: absolute;
+    animation: moveCat 0.1s infinite; }
+  .ShootingScene .gun {
+    width: 300px;
+    position: absolute;
+    top: 140px;
+    left: 40px;
+    z-index: 9;
+    animation: moveGun 0.1s infinite; }
+  .ShootingScene > div {
+    position: relative; }
+  .ShootingScene .bullet {
+    display: inline-block;
+    background: red;
+    width: 10px;
+    border-radius: 50%;
+    height: 10px;
+    position: absolute;
+    left: 320px;
+    top: 170px; }
+    .ShootingScene .bullet.bullet-0 {
+      animation: moveBullets 3s infinite linear, spreadBullets-0 3s linear infinite;
+      animation-delay: 1780ms; }
 
-.App-title {
-  font-size: 1.5em;
-}
+@keyframes moveBullets {
+  0% {
+    left: 40px; }
+  100% {
+    left: 120vw; } }
 
-.App-intro {
-  font-size: large;
-}
+@keyframes spreadBullets-0 {
+  0% {
+    top: 170px; }
+  20% {
+    top: 170px; }
+  100% {
+    top: 90px; } }
+    .ShootingScene .bullet.bullet-1 {
+      animation: moveBullets 3s infinite linear, spreadBullets-1 3s linear infinite;
+      animation-delay: 1337ms; }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
+@keyframes moveBullets {
+  0% {
+    left: 40px; }
+  100% {
+    left: 120vw; } }
+
+@keyframes spreadBullets-1 {
+  0% {
+    top: 170px; }
+  20% {
+    top: 170px; }
+  100% {
+    top: 252px; } }
+    .ShootingScene .bullet.bullet-2 {
+      animation: moveBullets 3s infinite linear, spreadBullets-2 3s linear infinite;
+      animation-delay: 2908ms; }
+
+@keyframes moveBullets {
+  0% {
+    left: 40px; }
+  100% {
+    left: 120vw; } }
+
+@keyframes spreadBullets-2 {
+  0% {
+    top: 170px; }
+  20% {
+    top: 170px; }
+  100% {
+    top: 231px; } }
+    .ShootingScene .bullet.bullet-3 {
+      animation: moveBullets 3s infinite linear, spreadBullets-3 3s linear infinite;
+      animation-delay: 2347ms; }
+
+@keyframes moveBullets {
+  0% {
+    left: 40px; }
+  100% {
+    left: 120vw; } }
+
+@keyframes spreadBullets-3 {
+  0% {
+    top: 170px; }
+  20% {
+    top: 170px; }
+  100% {
+    top: 222px; } }
+    .ShootingScene .bullet.bullet-4 {
+      animation: moveBullets 3s infinite linear, spreadBullets-4 3s linear infinite;
+      animation-delay: 932ms; }
+
+@keyframes moveBullets {
+  0% {
+    left: 40px; }
+  100% {
+    left: 120vw; } }
+
+@keyframes spreadBullets-4 {
+  0% {
+    top: 170px; }
+  20% {
+    top: 170px; }
+  100% {
+    top: 76px; } }
+    .ShootingScene .bullet.bullet-5 {
+      animation: moveBullets 3s infinite linear, spreadBullets-5 3s linear infinite;
+      animation-delay: 272ms; }
+
+@keyframes moveBullets {
+  0% {
+    left: 40px; }
+  100% {
+    left: 120vw; } }
+
+@keyframes spreadBullets-5 {
+  0% {
+    top: 170px; }
+  20% {
+    top: 170px; }
+  100% {
+    top: 150px; } }
+    .ShootingScene .bullet.bullet-6 {
+      animation: moveBullets 3s infinite linear, spreadBullets-6 3s linear infinite;
+      animation-delay: 303ms; }
+
+@keyframes moveBullets {
+  0% {
+    left: 40px; }
+  100% {
+    left: 120vw; } }
+
+@keyframes spreadBullets-6 {
+  0% {
+    top: 170px; }
+  20% {
+    top: 170px; }
+  100% {
+    top: 4px; } }
+    .ShootingScene .bullet.bullet-7 {
+      animation: moveBullets 3s infinite linear, spreadBullets-7 3s linear infinite;
+      animation-delay: 641ms; }
+
+@keyframes moveBullets {
+  0% {
+    left: 40px; }
+  100% {
+    left: 120vw; } }
+
+@keyframes spreadBullets-7 {
+  0% {
+    top: 170px; }
+  20% {
+    top: 170px; }
+  100% {
+    top: 291px; } }
+    .ShootingScene .bullet.bullet-8 {
+      animation: moveBullets 3s infinite linear, spreadBullets-8 3s linear infinite;
+      animation-delay: 2399ms; }
+
+@keyframes moveBullets {
+  0% {
+    left: 40px; }
+  100% {
+    left: 120vw; } }
+
+@keyframes spreadBullets-8 {
+  0% {
+    top: 170px; }
+  20% {
+    top: 170px; }
+  100% {
+    top: 62px; } }
+    .ShootingScene .bullet.bullet-9 {
+      animation: moveBullets 3s infinite linear, spreadBullets-9 3s linear infinite;
+      animation-delay: 2132ms; }
+
+@keyframes moveBullets {
+  0% {
+    left: 40px; }
+  100% {
+    left: 120vw; } }
+
+@keyframes spreadBullets-9 {
+  0% {
+    top: 170px; }
+  20% {
+    top: 170px; }
+  100% {
+    top: 285px; } }
+    .ShootingScene .bullet.bullet-10 {
+      animation: moveBullets 3s infinite linear, spreadBullets-10 3s linear infinite;
+      animation-delay: 975ms; }
+
+@keyframes moveBullets {
+  0% {
+    left: 40px; }
+  100% {
+    left: 120vw; } }
+
+@keyframes spreadBullets-10 {
+  0% {
+    top: 170px; }
+  20% {
+    top: 170px; }
+  100% {
+    top: 14px; } }
+    .ShootingScene .bullet.bullet-11 {
+      animation: moveBullets 3s infinite linear, spreadBullets-11 3s linear infinite;
+      animation-delay: 95ms; }
+
+@keyframes moveBullets {
+  0% {
+    left: 40px; }
+  100% {
+    left: 120vw; } }
+
+@keyframes spreadBullets-11 {
+  0% {
+    top: 170px; }
+  20% {
+    top: 170px; }
+  100% {
+    top: 65px; } }
+    .ShootingScene .bullet.bullet-12 {
+      animation: moveBullets 3s infinite linear, spreadBullets-12 3s linear infinite;
+      animation-delay: 2149ms; }
+
+@keyframes moveBullets {
+  0% {
+    left: 40px; }
+  100% {
+    left: 120vw; } }
+
+@keyframes spreadBullets-12 {
+  0% {
+    top: 170px; }
+  20% {
+    top: 170px; }
+  100% {
+    top: 22px; } }
+    .ShootingScene .bullet.bullet-13 {
+      animation: moveBullets 3s infinite linear, spreadBullets-13 3s linear infinite;
+      animation-delay: 2126ms; }
+
+@keyframes moveBullets {
+  0% {
+    left: 40px; }
+  100% {
+    left: 120vw; } }
+
+@keyframes spreadBullets-13 {
+  0% {
+    top: 170px; }
+  20% {
+    top: 170px; }
+  100% {
+    top: 243px; } }
+    .ShootingScene .bullet.bullet-14 {
+      animation: moveBullets 3s infinite linear, spreadBullets-14 3s linear infinite;
+      animation-delay: 273ms; }
+
+@keyframes moveBullets {
+  0% {
+    left: 40px; }
+  100% {
+    left: 120vw; } }
+
+@keyframes spreadBullets-14 {
+  0% {
+    top: 170px; }
+  20% {
+    top: 170px; }
+  100% {
+    top: 169px; } }
+    .ShootingScene .bullet.bullet-15 {
+      animation: moveBullets 3s infinite linear, spreadBullets-15 3s linear infinite;
+      animation-delay: 1755ms; }
+
+@keyframes moveBullets {
+  0% {
+    left: 40px; }
+  100% {
+    left: 120vw; } }
+
+@keyframes spreadBullets-15 {
+  0% {
+    top: 170px; }
+  20% {
+    top: 170px; }
+  100% {
+    top: 163px; } }
+    .ShootingScene .bullet.bullet-16 {
+      animation: moveBullets 3s infinite linear, spreadBullets-16 3s linear infinite;
+      animation-delay: 482ms; }
+
+@keyframes moveBullets {
+  0% {
+    left: 40px; }
+  100% {
+    left: 120vw; } }
+
+@keyframes spreadBullets-16 {
+  0% {
+    top: 170px; }
+  20% {
+    top: 170px; }
+  100% {
+    top: 118px; } }
+    .ShootingScene .bullet.bullet-17 {
+      animation: moveBullets 3s infinite linear, spreadBullets-17 3s linear infinite;
+      animation-delay: 2740ms; }
+
+@keyframes moveBullets {
+  0% {
+    left: 40px; }
+  100% {
+    left: 120vw; } }
+
+@keyframes spreadBullets-17 {
+  0% {
+    top: 170px; }
+  20% {
+    top: 170px; }
+  100% {
+    top: 121px; } }
+    .ShootingScene .bullet.bullet-18 {
+      animation: moveBullets 3s infinite linear, spreadBullets-18 3s linear infinite;
+      animation-delay: 769ms; }
+
+@keyframes moveBullets {
+  0% {
+    left: 40px; }
+  100% {
+    left: 120vw; } }
+
+@keyframes spreadBullets-18 {
+  0% {
+    top: 170px; }
+  20% {
+    top: 170px; }
+  100% {
+    top: 238px; } }
+    .ShootingScene .bullet.bullet-19 {
+      animation: moveBullets 3s infinite linear, spreadBullets-19 3s linear infinite;
+      animation-delay: 1803ms; }
+
+@keyframes moveBullets {
+  0% {
+    left: 40px; }
+  100% {
+    left: 120vw; } }
+
+@keyframes spreadBullets-19 {
+  0% {
+    top: 170px; }
+  20% {
+    top: 170px; }
+  100% {
+    top: 231px; } }
+    .ShootingScene .bullet.bullet-20 {
+      animation: moveBullets 3s infinite linear, spreadBullets-20 3s linear infinite;
+      animation-delay: 2300ms; }
+
+@keyframes moveBullets {
+  0% {
+    left: 40px; }
+  100% {
+    left: 120vw; } }
+
+@keyframes spreadBullets-20 {
+  0% {
+    top: 170px; }
+  20% {
+    top: 170px; }
+  100% {
+    top: 119px; } }
+    .ShootingScene .bullet.bullet-21 {
+      animation: moveBullets 3s infinite linear, spreadBullets-21 3s linear infinite;
+      animation-delay: 820ms; }
+
+@keyframes moveBullets {
+  0% {
+    left: 40px; }
+  100% {
+    left: 120vw; } }
+
+@keyframes spreadBullets-21 {
+  0% {
+    top: 170px; }
+  20% {
+    top: 170px; }
+  100% {
+    top: 271px; } }
+    .ShootingScene .bullet.bullet-22 {
+      animation: moveBullets 3s infinite linear, spreadBullets-22 3s linear infinite;
+      animation-delay: 2394ms; }
+
+@keyframes moveBullets {
+  0% {
+    left: 40px; }
+  100% {
+    left: 120vw; } }
+
+@keyframes spreadBullets-22 {
+  0% {
+    top: 170px; }
+  20% {
+    top: 170px; }
+  100% {
+    top: 46px; } }
+    .ShootingScene .bullet.bullet-23 {
+      animation: moveBullets 3s infinite linear, spreadBullets-23 3s linear infinite;
+      animation-delay: 747ms; }
+
+@keyframes moveBullets {
+  0% {
+    left: 40px; }
+  100% {
+    left: 120vw; } }
+
+@keyframes spreadBullets-23 {
+  0% {
+    top: 170px; }
+  20% {
+    top: 170px; }
+  100% {
+    top: 104px; } }
+    .ShootingScene .bullet.bullet-24 {
+      animation: moveBullets 3s infinite linear, spreadBullets-24 3s linear infinite;
+      animation-delay: 872ms; }
+
+@keyframes moveBullets {
+  0% {
+    left: 40px; }
+  100% {
+    left: 120vw; } }
+
+@keyframes spreadBullets-24 {
+  0% {
+    top: 170px; }
+  20% {
+    top: 170px; }
+  100% {
+    top: 38px; } }
+    .ShootingScene .bullet.bullet-25 {
+      animation: moveBullets 3s infinite linear, spreadBullets-25 3s linear infinite;
+      animation-delay: 10ms; }
+
+@keyframes moveBullets {
+  0% {
+    left: 40px; }
+  100% {
+    left: 120vw; } }
+
+@keyframes spreadBullets-25 {
+  0% {
+    top: 170px; }
+  20% {
+    top: 170px; }
+  100% {
+    top: 184px; } }
+    .ShootingScene .bullet.bullet-26 {
+      animation: moveBullets 3s infinite linear, spreadBullets-26 3s linear infinite;
+      animation-delay: 2173ms; }
+
+@keyframes moveBullets {
+  0% {
+    left: 40px; }
+  100% {
+    left: 120vw; } }
+
+@keyframes spreadBullets-26 {
+  0% {
+    top: 170px; }
+  20% {
+    top: 170px; }
+  100% {
+    top: 232px; } }
+    .ShootingScene .bullet.bullet-27 {
+      animation: moveBullets 3s infinite linear, spreadBullets-27 3s linear infinite;
+      animation-delay: 1949ms; }
+
+@keyframes moveBullets {
+  0% {
+    left: 40px; }
+  100% {
+    left: 120vw; } }
+
+@keyframes spreadBullets-27 {
+  0% {
+    top: 170px; }
+  20% {
+    top: 170px; }
+  100% {
+    top: 113px; } }
+    .ShootingScene .bullet.bullet-28 {
+      animation: moveBullets 3s infinite linear, spreadBullets-28 3s linear infinite;
+      animation-delay: 700ms; }
+
+@keyframes moveBullets {
+  0% {
+    left: 40px; }
+  100% {
+    left: 120vw; } }
+
+@keyframes spreadBullets-28 {
+  0% {
+    top: 170px; }
+  20% {
+    top: 170px; }
+  100% {
+    top: 138px; } }
+    .ShootingScene .bullet.bullet-29 {
+      animation: moveBullets 3s infinite linear, spreadBullets-29 3s linear infinite;
+      animation-delay: 425ms; }
+
+@keyframes moveBullets {
+  0% {
+    left: 40px; }
+  100% {
+    left: 120vw; } }
+
+@keyframes spreadBullets-29 {
+  0% {
+    top: 170px; }
+  20% {
+    top: 170px; }
+  100% {
+    top: 82px; } }
+    .ShootingScene .bullet.bullet-30 {
+      animation: moveBullets 3s infinite linear, spreadBullets-30 3s linear infinite;
+      animation-delay: 1529ms; }
+
+@keyframes moveBullets {
+  0% {
+    left: 40px; }
+  100% {
+    left: 120vw; } }
+
+@keyframes spreadBullets-30 {
+  0% {
+    top: 170px; }
+  20% {
+    top: 170px; }
+  100% {
+    top: 246px; } }
+    .ShootingScene .bullet.bullet-31 {
+      animation: moveBullets 3s infinite linear, spreadBullets-31 3s linear infinite;
+      animation-delay: 2968ms; }
+
+@keyframes moveBullets {
+  0% {
+    left: 40px; }
+  100% {
+    left: 120vw; } }
+
+@keyframes spreadBullets-31 {
+  0% {
+    top: 170px; }
+  20% {
+    top: 170px; }
+  100% {
+    top: 90px; } }
+    .ShootingScene .bullet.bullet-32 {
+      animation: moveBullets 3s infinite linear, spreadBullets-32 3s linear infinite;
+      animation-delay: 2927ms; }
+
+@keyframes moveBullets {
+  0% {
+    left: 40px; }
+  100% {
+    left: 120vw; } }
+
+@keyframes spreadBullets-32 {
+  0% {
+    top: 170px; }
+  20% {
+    top: 170px; }
+  100% {
+    top: 8px; } }
+    .ShootingScene .bullet.bullet-33 {
+      animation: moveBullets 3s infinite linear, spreadBullets-33 3s linear infinite;
+      animation-delay: 1553ms; }
+
+@keyframes moveBullets {
+  0% {
+    left: 40px; }
+  100% {
+    left: 120vw; } }
+
+@keyframes spreadBullets-33 {
+  0% {
+    top: 170px; }
+  20% {
+    top: 170px; }
+  100% {
+    top: 65px; } }
+    .ShootingScene .bullet.bullet-34 {
+      animation: moveBullets 3s infinite linear, spreadBullets-34 3s linear infinite;
+      animation-delay: 1561ms; }
+
+@keyframes moveBullets {
+  0% {
+    left: 40px; }
+  100% {
+    left: 120vw; } }
+
+@keyframes spreadBullets-34 {
+  0% {
+    top: 170px; }
+  20% {
+    top: 170px; }
+  100% {
+    top: 274px; } }
+    .ShootingScene .bullet.bullet-35 {
+      animation: moveBullets 3s infinite linear, spreadBullets-35 3s linear infinite;
+      animation-delay: 2118ms; }
+
+@keyframes moveBullets {
+  0% {
+    left: 40px; }
+  100% {
+    left: 120vw; } }
+
+@keyframes spreadBullets-35 {
+  0% {
+    top: 170px; }
+  20% {
+    top: 170px; }
+  100% {
+    top: 115px; } }
+    .ShootingScene .bullet.bullet-36 {
+      animation: moveBullets 3s infinite linear, spreadBullets-36 3s linear infinite;
+      animation-delay: 2181ms; }
+
+@keyframes moveBullets {
+  0% {
+    left: 40px; }
+  100% {
+    left: 120vw; } }
+
+@keyframes spreadBullets-36 {
+  0% {
+    top: 170px; }
+  20% {
+    top: 170px; }
+  100% {
+    top: 298px; } }
+    .ShootingScene .bullet.bullet-37 {
+      animation: moveBullets 3s infinite linear, spreadBullets-37 3s linear infinite;
+      animation-delay: 203ms; }
+
+@keyframes moveBullets {
+  0% {
+    left: 40px; }
+  100% {
+    left: 120vw; } }
+
+@keyframes spreadBullets-37 {
+  0% {
+    top: 170px; }
+  20% {
+    top: 170px; }
+  100% {
+    top: 164px; } }
+    .ShootingScene .bullet.bullet-38 {
+      animation: moveBullets 3s infinite linear, spreadBullets-38 3s linear infinite;
+      animation-delay: 1512ms; }
+
+@keyframes moveBullets {
+  0% {
+    left: 40px; }
+  100% {
+    left: 120vw; } }
+
+@keyframes spreadBullets-38 {
+  0% {
+    top: 170px; }
+  20% {
+    top: 170px; }
+  100% {
+    top: 103px; } }
+    .ShootingScene .bullet.bullet-39 {
+      animation: moveBullets 3s infinite linear, spreadBullets-39 3s linear infinite;
+      animation-delay: 1069ms; }
+
+@keyframes moveBullets {
+  0% {
+    left: 40px; }
+  100% {
+    left: 120vw; } }
+
+@keyframes spreadBullets-39 {
+  0% {
+    top: 170px; }
+  20% {
+    top: 170px; }
+  100% {
+    top: 143px; } }
+    .ShootingScene .bullet.bullet-40 {
+      animation: moveBullets 3s infinite linear, spreadBullets-40 3s linear infinite;
+      animation-delay: 304ms; }
+
+@keyframes moveBullets {
+  0% {
+    left: 40px; }
+  100% {
+    left: 120vw; } }
+
+@keyframes spreadBullets-40 {
+  0% {
+    top: 170px; }
+  20% {
+    top: 170px; }
+  100% {
+    top: 143px; } }
+    .ShootingScene .bullet.bullet-41 {
+      animation: moveBullets 3s infinite linear, spreadBullets-41 3s linear infinite;
+      animation-delay: 1121ms; }
+
+@keyframes moveBullets {
+  0% {
+    left: 40px; }
+  100% {
+    left: 120vw; } }
+
+@keyframes spreadBullets-41 {
+  0% {
+    top: 170px; }
+  20% {
+    top: 170px; }
+  100% {
+    top: 274px; } }
+    .ShootingScene .bullet.bullet-42 {
+      animation: moveBullets 3s infinite linear, spreadBullets-42 3s linear infinite;
+      animation-delay: 935ms; }
+
+@keyframes moveBullets {
+  0% {
+    left: 40px; }
+  100% {
+    left: 120vw; } }
+
+@keyframes spreadBullets-42 {
+  0% {
+    top: 170px; }
+  20% {
+    top: 170px; }
+  100% {
+    top: 205px; } }
+    .ShootingScene .bullet.bullet-43 {
+      animation: moveBullets 3s infinite linear, spreadBullets-43 3s linear infinite;
+      animation-delay: 949ms; }
+
+@keyframes moveBullets {
+  0% {
+    left: 40px; }
+  100% {
+    left: 120vw; } }
+
+@keyframes spreadBullets-43 {
+  0% {
+    top: 170px; }
+  20% {
+    top: 170px; }
+  100% {
+    top: 227px; } }
+    .ShootingScene .bullet.bullet-44 {
+      animation: moveBullets 3s infinite linear, spreadBullets-44 3s linear infinite;
+      animation-delay: 2915ms; }
+
+@keyframes moveBullets {
+  0% {
+    left: 40px; }
+  100% {
+    left: 120vw; } }
+
+@keyframes spreadBullets-44 {
+  0% {
+    top: 170px; }
+  20% {
+    top: 170px; }
+  100% {
+    top: 141px; } }
+    .ShootingScene .bullet.bullet-45 {
+      animation: moveBullets 3s infinite linear, spreadBullets-45 3s linear infinite;
+      animation-delay: 2694ms; }
+
+@keyframes moveBullets {
+  0% {
+    left: 40px; }
+  100% {
+    left: 120vw; } }
+
+@keyframes spreadBullets-45 {
+  0% {
+    top: 170px; }
+  20% {
+    top: 170px; }
+  100% {
+    top: 229px; } }
+    .ShootingScene .bullet.bullet-46 {
+      animation: moveBullets 3s infinite linear, spreadBullets-46 3s linear infinite;
+      animation-delay: 2604ms; }
+
+@keyframes moveBullets {
+  0% {
+    left: 40px; }
+  100% {
+    left: 120vw; } }
+
+@keyframes spreadBullets-46 {
+  0% {
+    top: 170px; }
+  20% {
+    top: 170px; }
+  100% {
+    top: 182px; } }
+    .ShootingScene .bullet.bullet-47 {
+      animation: moveBullets 3s infinite linear, spreadBullets-47 3s linear infinite;
+      animation-delay: 2958ms; }
+
+@keyframes moveBullets {
+  0% {
+    left: 40px; }
+  100% {
+    left: 120vw; } }
+
+@keyframes spreadBullets-47 {
+  0% {
+    top: 170px; }
+  20% {
+    top: 170px; }
+  100% {
+    top: 191px; } }
+    .ShootingScene .bullet.bullet-48 {
+      animation: moveBullets 3s infinite linear, spreadBullets-48 3s linear infinite;
+      animation-delay: 1559ms; }
+
+@keyframes moveBullets {
+  0% {
+    left: 40px; }
+  100% {
+    left: 120vw; } }
+
+@keyframes spreadBullets-48 {
+  0% {
+    top: 170px; }
+  20% {
+    top: 170px; }
+  100% {
+    top: 75px; } }
+    .ShootingScene .bullet.bullet-49 {
+      animation: moveBullets 3s infinite linear, spreadBullets-49 3s linear infinite;
+      animation-delay: 420ms; }
+
+@keyframes moveBullets {
+  0% {
+    left: 40px; }
+  100% {
+    left: 120vw; } }
+
+@keyframes spreadBullets-49 {
+  0% {
+    top: 170px; }
+  20% {
+    top: 170px; }
+  100% {
+    top: 72px; } }
+    .ShootingScene .bullet.bullet-50 {
+      animation: moveBullets 3s infinite linear, spreadBullets-50 3s linear infinite;
+      animation-delay: 1285ms; }
+
+@keyframes moveBullets {
+  0% {
+    left: 40px; }
+  100% {
+    left: 120vw; } }
+
+@keyframes spreadBullets-50 {
+  0% {
+    top: 170px; }
+  20% {
+    top: 170px; }
+  100% {
+    top: 51px; } }
