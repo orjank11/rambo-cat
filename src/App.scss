@@ -1,0 +1,66 @@
+// @keyframes moveCat {
+//     0% { transform: rotate(-2deg) }
+//   100% { transform: rotate(2deg) }
+// }
+
+// @keyframes moveGun {
+//     0% { left: 40px; transform: rotate(-2deg) }
+//   100% { left: 50px; transform: rotate(2deg) }
+// }
+
+// @keyframes moveBullets {
+//     0% { left: 40px; }
+//   100% { left: 120vw; }
+// }
+
+// @mixin moveBulletsEvenMore($i) {
+//   $top: random(300);
+
+//   @keyframes spreadBullets-#{$i} {
+//       0% { top: 170px; }
+//      20% { top: 170px; }
+//     100% { top: #{$top}px; }
+//   }
+//   animation: moveBullets 3s infinite linear, spreadBullets-#{$i} 3s linear infinite;
+// }
+
+.ShootingScene {
+  padding-top: 400px;
+  .rambo {
+    left: 0px;
+    top: 0px;
+    width: 300px;
+    position: absolute;
+    // animation: moveCat 0.1s infinite;
+
+  }
+  .gun {
+    width: 300px;
+    position: absolute;
+    top: 140px;
+    left: 40px;
+    z-index: 9;
+    // animation: moveGun 0.1s infinite;
+  }
+  > div {
+    position: relative;
+  }
+  .bullet {
+    display: inline-block;
+    background: red;
+    width: 10px;
+    border-radius: 50%;
+    height: 10px;
+    position: absolute;
+    left: 320px;
+    top: 170px;
+
+    @for $i from 0 through 50 {
+      $delay: random(3000);
+      &.bullet-#{$i} {
+        @include moveBulletsEvenMore($i);
+        animation-delay: #{$delay}ms;
+      }
+    }
+  }
+}
