@@ -12,7 +12,7 @@ class SchootingScene extends Component {
           <Gun />
           {[...Array(50)].map((x, i) => {
             return (
-              <span key={`bullet-${x}`} className={`bullet bullet-${i}`} />
+              <span key={`bullet-${i}`} className={`bullet bullet-${i}`} />
             );
           })}
         </div>

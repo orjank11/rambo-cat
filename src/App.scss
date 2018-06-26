@@ -8,12 +8,14 @@
   100% { left: 50px; transform: rotate(2deg) }
 }
 
+@keyframes moveBullets {
+    0% { left: 40px; }
+  100% { left: 120vw; }
+}
+
 @mixin moveBulletsEvenMore($i) {
   $top: random(300);
-  @keyframes moveBullets {
-      0% { left: 40px; }
-    100% { left: 120vw; }
-  }
+
   @keyframes spreadBullets-#{$i} {
       0% { top: 170px; }
      20% { top: 170px; }
@@ -54,6 +56,7 @@
     top: 170px;
 
     @for $i from 0 through 50 {
+
       $delay: random(3000);
       $rotation: random(15);
       &.bullet-#{$i} {
